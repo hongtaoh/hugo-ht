@@ -1,0 +1,33 @@
+<footer class="footer">
+  {{ partial "foot_custom.html" . }}
+     <ul class="footer-links">
+          {{ with .OutputFormats.Get "RSS" }}
+          <li>
+            <a href="{{ .RelPermalink }}" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          {{ end }}
+          <li>
+            {{ if eq .Section "cn"}}
+            <!-- <a href="https://gohugo.io/" class="footer-links-kudos"> 内容存于 <i class="fa fa-github" style="font-size: 18pt"></i></a></li> -->
+            <a href="https://gohugo.io/" class="footer-links-kudos"><img src="/media/hugo-logo.png" width="22" height="22"> 强力驱动</a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> 内容存于 <i class="fa fa-github" style="font-size: 18pt"></i></a></li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+            {{ else }}
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>
+          </li>
+          <li>
+            <a href="https://github.com/hongtaoh/hongtaoh.github.io" class="footer-links-kudos"> Source in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+          </li>
+          <li>
+            <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
+          </li>
+          {{ end }}
+     </ul>
+</footer>
+
+
+

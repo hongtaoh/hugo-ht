@@ -1,0 +1,20 @@
+<nav class="nav" >
+      <a href="{{ "/" | relURL }}" class="nav-logo">
+        <img src="{{ print "media/" .Site.Params.logo.url | relURL }}"
+         width="{{ .Site.Params.logo.width }}"
+         height="{{ .Site.Params.logo.height }}"
+         alt="{{ .Site.Params.logo.alt }}">
+      </a>
+
+      <ul class="nav-links" >
+       {{ if eq .Section "cn"}}
+       {{ range .Site.Menus.cn }}
+       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+       {{ end }}
+       {{ else }}
+       {{ range .Site.Menus.en }}
+       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+       {{ end }}
+       {{ end }}
+      </ul>
+</nav>

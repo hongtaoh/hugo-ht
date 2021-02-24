@@ -1,0 +1,474 @@
+html,
+body {
+  margin: auto;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  image-rendering: -webkit-optimize-contrast;
+} 
+
+/* Two columns */
+div.splitbox {
+  width:100%; 
+  margin-top: 0rem;
+  margin-bottom: 1em;
+}
+
+div.splitbox div.left {
+               width:35%;
+               float:left;
+               color: gray;
+}
+
+div.splitbox div.right {
+               width:64%;
+               float:right;}
+
+@media only screen and (max-width: 600px) {
+div.splitbox div.left {
+               width:100%;
+               float:left;}
+div.splitbox div.right {
+               width:100%;
+               float:left;}
+}
+
+
+#top {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+.fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer { 
+  text-align: center; font-size: 19px;
+  padding: 30px 0;
+} 
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer-links li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 150ms ease;
+  margin: 0 15px;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #222;
+}
+
+.footer-links li::before {
+  content: '/';
+  position: relative;
+  left: -2px;
+}
+
+.footer-links li:first-child::before {
+  display: none;
+}
+.footer-links-kudos img {
+  position: relative;
+  top: 6px;
+  margin-left: 2px;
+}
+
+/* navigation bar positioning */
+.nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: right;
+}
+
+.nav-logo {
+  float: left;
+  margin-top: -11px;
+  transition: transform 150ms ease-out;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-logo img {
+  display: block;
+  max-height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 0 0 15px;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+/*The parameter of `max-width` below controls the width of the body text. 
+Customize as you prefer*/
+.content {
+  max-width: 750px; 
+  margin: 60px auto auto auto;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  padding: 20px 0;
+  position: relative;
+  background: #f5f5f5;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-anchor:hover,
+.header-anchor:focus {
+  background-color: gray;
+}
+
+
+.title {
+  font-size: 1.1em; }
+
+.article-toolbar a {
+  margin-left: .2em;
+}
+
+.article-toolbar a:hover, .article-toolbar a:focus {
+  color: #222;
+}
+
+/* footer text styling */
+.footer-text {
+  text-align: center;
+  margin-top: -1.2em;
+  font-size: 19px;
+}
+
+pre {
+  border: 1px solid #cccccc; 
+  /*#757575*/
+}
+
+pre code {
+  background-color: transparent;
+  border: none;
+}
+
+code {
+  padding: 2px 0.25rem;
+  border-radius: 2px;
+  border: 1px solid #757575;
+}
+
+/* table of contents styling. Based on the blog of Zachary Wade Betz: https://zwbetz.com/ */
+.toc {
+  border: .25rem solid #757575;
+  padding: 1rem; 
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  color: #757575;
+}
+
+.toc a,
+.toc a:visited {
+  text-decoration: none;
+  color: #757575;
+}
+
+.toc a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+/* misc elements */
+img, iframe, video { max-width: 100%; }
+main { 
+  hyphens: auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  margin: 1em 0;
+  padding: 0 2em;
+  border-left: 3px solid #ddd;
+  font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi_GB2312';
+}
+
+/*Styling Custome blocks. based on Yihui Xie's Bookdown book's CSS: 
+  https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css */
+.note,
+.important,
+.tip,
+.caution,
+.warning {
+  min-height: 2.2em;
+  padding: 1em 1em 0.1em 4em;
+  background: #f5f5f5 2px top/3em no-repeat;
+  font-family: Optima, 'Songti SC', Simsun;
+  font-size: 19px;
+} 
+.note {
+  background-image: url("/media/blocks/note.png");
+}
+.important {
+  background-image: url("/media/blocks/important.png");
+}
+.tip {
+  background-image: url("/media/blocks/tip.png");
+}
+.caution {
+  background-image: url("/media/blocks/caution.png");
+}
+.warning {
+  background-image: url("/media/blocks/warning.png");
+}
+.reminder {
+  min-height: 3.2em;
+  padding: 1em 1em 1em 4em;
+  background: #f5f5f5 2px center/3em no-repeat;
+  font-family: Optima, 'Songti SC', Simsun;
+  font-size: 19px;
+  background-image: url("/media/blocks/reminder.png");
+}
+
+table {
+  font-size: 19px;
+  margin: auto;
+  margin-bottom: 2em;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+/* figure floating */
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; 
+}
+
+/* figure caption styling */
+figcaption {
+  margin-top: 8px;
+  text-align: center;
+  color: gray;
+} 
+
+figcaption a {
+  font-size: 14px;
+} 
+
+/* Styling body texts. Based on https://github.com/xiangming/typo/blob/master/css/typo.css */
+
+@charset 'utf-8';
+/*!
+ * Typo v1.0.6 (http://typo.reqianduan.com/)
+ * A typography stylesheet designed for better reading experience.
+ * © 2017 Arvin Xiang. All rights reserved.
+ */
+
+h1,
+h2,
+h3 
+h4,
+h5,
+h6 {
+  /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+  padding: 0;
+  margin: 40px 0 30px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+article-title {margin-top: 0px;}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 20px;
+  color: grey;
+}
+
+
+ul,
+ol {
+  margin: 0 0 12px;
+}
+ul li,
+ol li {
+  font-size: 19px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 19.5px;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+/*hyperlink texts styling*/
+
+.list-page a {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+.list-page a:hover {
+}
+
+.list-page sup a {
+  border-bottom: none;
+}
+
+.body-text.list-text a {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+.body-text.list-text a:hover {
+}
+
+.body-text.list-text sup a {
+  border-bottom: none;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em, 
+
+i {
+  font-style: italic;
+}
+
+figure img {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto auto 4px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 40px auto;
+  padding: 0;
+  max-width: 300px;
+}
+
+/* styling the footnotes */
+.body-text.list-text a[href^="#fn:"],
+.body-text.list-text a[href^="#fnref:"] {
+  text-decoration: none;
+  color: red;
+  font-family: monospace;
+}
+.body-text.list-text a[href^="#fn:"]:before{ content: '[' }
+.body-text.list-text a[href^="#fn:"]:after{ content: ']' }
+
+/*Responsive design for small screens*/
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3, h4, h5, h6 {
+    font-size: 16px;
+  }
+
+  pre, code {
+    font-size: 12px;
+  }
+
+}
+
+
