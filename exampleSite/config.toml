@@ -2,6 +2,7 @@ baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "Hugo-HT"
 theme = "hugo-ht"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
 [permalinks]
@@ -42,8 +43,9 @@ en = "/en/:year/:month/:day/:slug/"
     homeText = "You just need a Hugo blog from scratch"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "/ht10.ico"
+    favicon = "media/hugo-logo.png"
     footer = "&copy; Your Name 2021"
+    SiteUpdateText = "site last updated on"
 
 [params.logo]
   url = "hugo-logo.png"
