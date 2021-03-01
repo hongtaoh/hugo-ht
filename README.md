@@ -2,7 +2,9 @@
 
 A simple hugo theme suitable for bilingual personal blogs. It is  a copy of [my personal website](https://hongtaoh.com/).
 
-[Example site]()
+[Example site](https://hugo-ht.hongtaoh.com/)
+
+![example site appearance](https://raw.githubusercontent.com/hongtaoh/hugo-ht/master/static/media/exampleSite.png)
 
 ## Shoulders of the giants
 
