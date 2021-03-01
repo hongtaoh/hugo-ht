@@ -48,6 +48,7 @@ en = "/en/:year/:month/:day/:slug/"
     copyright = "&copy;"
     copyrightYear = "2021"
     SiteUpdateText = "site last updated on"
+    GithubRepo = "https://github.com/USERNAME/REPONAME"
 
 [params.logo]
   url = "hugo-logo.png"
