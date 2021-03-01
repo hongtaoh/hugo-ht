@@ -30,8 +30,12 @@
      </ul>
      <ul class="footer-links" style="margin-top: 10pt; color: grey">
           <li>
-            {{ with .Site.Params.footer }}
-            {{ . | markdownify }}
+            {{ with .Site.Params.copyright }}
+            {{ .| markdownify }}
+            {{ end }}
+            {{ default (index $.Site.Params.author.en) (index $.Site.Params.author $.Section) }}
+            {{ with .Site.Params.copyrightYear }}
+            {{ .| markdownify }}
             {{ end }}
           </li>
      </ul>

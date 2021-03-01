@@ -1,6 +1,7 @@
 ---
 title: "王大锤简历"
 type : list-single
+toc: true
 ---
 
 姓名：王大锤

@@ -3,7 +3,7 @@
 <main class = "content" role="main">
 <div style="text-align: center">
 {{ if not .IsHome }}
-<h1 class="article-title">{{ .Title }}</h1>
+<h1>{{ .Title }}</h1>
 {{ with .Params.subtitle }}<h1><span class="subtitle">{{ . }}</span></h1>{{ end }}
 <p>{{ with .Params.author }}{{ . }}{{ end }} 
 {{ if .Params.date }} / {{ .Date.Format "2006-01-02" }} {{ end }}</p>
@@ -12,7 +12,7 @@
 </div>
 
 <span class="article-toolbar">
-{{ if .IsPage}}
+  {{ if .IsPage}}
   {{ if .File.Path}}
   {{ $Rmd := (print .File.BaseFileName ".Rmd") }}
   {{ if (where (readDir (print "content/" .File.Dir)) "Name" $Rmd) }}
@@ -37,11 +37,7 @@ Table of Contents:
 
 <div class="body-text list-text">
 {{ .Content | partial "add-header-anchors" }}
-{{ if eq .Section "en"}}
-<p style="color:#777;">Last modified on {{ .Page.Lastmod.Format "2006-01-02" }}</p>
-{{ else }}
-<p style="color:#777;">最后一次修改于 {{ .Page.Lastmod.Format "2006-01-02" }}</p>
-{{ end }}
+<p style="color:#777;">{{(index $.Site.Params.lang.lastupdate $.Section)}} {{ .Page.Lastmod.Format "2006-01-02" }}</p>
 </div>
 <a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
 

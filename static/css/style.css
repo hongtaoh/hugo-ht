@@ -39,7 +39,6 @@ div.splitbox div.right {
                float:left;}
 }
 
-
 #top {
   position: fixed;
   right: 0;
@@ -178,11 +177,11 @@ Customize as you prefer*/
   background-color: gray;
 }
 
-
 .title {
   font-size: 1.1em; }
 
 .article-toolbar a {
+  margin-bottom: 2px;
   margin-left: .2em;
 }
 
@@ -333,8 +332,6 @@ h1 {
   font-weight: normal;
 }
 
-article-title {margin-top: 0px;}
-
 h2 {
   font-size: 28px;
   font-weight: normal;
@@ -351,7 +348,6 @@ h6 {
   font-size: 20px;
   color: grey;
 }
-
 
 ul,
 ol {
@@ -371,7 +367,6 @@ p {
 }
 
 /*hyperlink texts styling*/
-
 .list-page a {
   color: black;
   text-decoration: none;

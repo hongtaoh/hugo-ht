@@ -44,7 +44,9 @@ en = "/en/:year/:month/:day/:slug/"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
     favicon = "media/hugo-logo.png"
-    footer = "&copy; Your Name 2021"
+    GithubEdit = "https://github.com/USERNAME/REPONAME/edit/master/content/"
+    copyright = "&copy;"
+    copyrightYear = "2021"
     SiteUpdateText = "site last updated on"
 
 [params.logo]
@@ -53,15 +55,19 @@ en = "/en/:year/:month/:day/:slug/"
   height = 50.0
   alt = "Hugo-ht"
 
-  [params.author]
+[params.author]
   en = "Your Name"
   cn = "你的名字"
 
-  [params.lang]
+[params.lang]
 
-    [params.lang.edit]
+  [params.lang.edit]
     en = "Suggest an edit of this page"
     cn = "编辑本页"
+
+  [params.lang.lastupdate]
+    en = "Last modified on"
+    cn = "最后一次修改于"
 
 [markup]
  defaultMarkdownHandler = "goldmark"
