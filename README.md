@@ -58,7 +58,7 @@ git add hugo-ht
 git commit -m "updating submodule to latest"
 cd ..
 ```
-The above codes came from [paularmstrong](https://github.com/tj/git-extras/pull/80#issuecomment-3992323)
+The above codes came from [paularmstrong](https://github.com/tj/git-extras/pull/80#issuecomment-3992323).
 
 ## License
 
