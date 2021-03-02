@@ -14,6 +14,7 @@
           <li>
             {{ with .Site.Params.GithubRepo}}
             <a href="{{ . }}" class="footer-links-kudos"> 内容存于 <i class="fa fa-github" style="font-size: 18pt"></i></a></li>
+            {{ end }}
           <li>
             <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
           </li>
@@ -24,14 +25,14 @@
           <li>
             {{ with .Site.Params.GithubRepo}}
             <a href="{{ . }}" class="footer-links-kudos"> Source in <i class="fa fa-github" style="font-size: 18pt"></i></a>
+            {{ end }}
           </li>
           <li>
             <a href = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> BY-NC-SA 4.0 </a>
           </li>
           {{ end }}
      </ul>
-     <ul class="footer-links" style="margin-top: 10pt; color: grey">
-          <li>
+     <div class="copyright-text">
             {{ with .Site.Params.copyright }}
             {{ .| markdownify }}
             {{ end }}
@@ -39,8 +40,7 @@
             {{ with .Site.Params.copyrightYear }}
             {{ .| markdownify }}
             {{ end }}
-          </li>
-     </ul>
+     </div>
 </footer>
 
 

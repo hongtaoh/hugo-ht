@@ -30,6 +30,7 @@ git clone https://github.com/hongtaoh/hugo-ht
 git remote rm origin
 cd ..
 ```
+### Submodule 
 
 Or you can add hugo-ht as a submodule:
 
@@ -39,7 +40,25 @@ git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
 
 The difference between the two methods is that if you add it as a submodule, the `hugo-ht` theme you use is connected to this repository. The benefit is that you can keep it updated, but there is a caveat: if you make lots of changes to the styles based on your personal preferences, these changes might be lost.
 
-If you pretty satisfied with what `hugo-ht` looks right now, or you are going to make changes according to your personal taste, simply `git clone` is recommended. 
+Simply `git clone` is recommended if:
+
+- You pretty satisfied with the current version of `hugo-ht`; and/or
+
+- You are going to make changes according to your personal taste; and/or
+
+- You are not familiar with Git and do not know how to update the submodule. 
+
+To update the submodule, run the following codes at the root directory of your hugo project:
+
+```bash
+cd themes/hugo-ht
+git checkout master && git pull
+cd ..
+git add hugo-ht
+git commit -m "updating submodule to latest"
+cd ..
+```
+The above codes came from [paularmstrong](https://github.com/tj/git-extras/pull/80#issuecomment-3992323)
 
 ## License
 

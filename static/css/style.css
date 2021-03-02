@@ -54,6 +54,8 @@ div.splitbox div.right {
   margin-right: -50vw;
 }
 
+/*Stylying footer text*/
+
 .footer { 
   text-align: center; font-size: 19px;
   padding: 30px 0;
@@ -98,6 +100,12 @@ div.splitbox div.right {
   position: relative;
   top: 6px;
   margin-left: 2px;
+}
+
+.copyright-text {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  color: grey;
 }
 
 /* navigation bar positioning */
@@ -361,7 +369,7 @@ ol li {
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: 19.5px;
+  font-size: 19px;
   font-weight: 400;
   line-height: 1.8em;
 }
