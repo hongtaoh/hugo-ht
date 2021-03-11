@@ -29,8 +29,10 @@ Navigate to the root of hugo project and run:
 ```bash
 cd themes
 git clone https://github.com/hongtaoh/hugo-ht
+cd hugo-ht
 git remote rm origin
 cd ..
+cd .. 
 ```
 ### Submodule 
 
