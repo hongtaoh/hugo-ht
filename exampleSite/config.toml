@@ -44,7 +44,7 @@ en = "/en/:year/:month/:day/:slug/"
     homeText = "You just need a Hugo blog from scratch"
     # Be sure the make sure that the blogDirNmae matches the name used in the menu:
     blogDirName = "posts"
-    singleLang = false
+    # singleLang = true
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
@@ -71,7 +71,7 @@ en = "/en/:year/:month/:day/:slug/"
       en = "Your Name"
       cn = "你的名字"
 
-    [params.lang.poweredBy]
+    [params.lang.madeWith]
       en = "Made with"
       cn = "本站驱动"
 
