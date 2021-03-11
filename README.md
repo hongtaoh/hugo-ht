@@ -20,6 +20,8 @@ I wouldn't call it a "theme" because it is heavily built on other people's work:
 
 - Custom blocks are based on the [CSS of Bookdown](https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css) by Yihui Xie
 
+Besides, [Daijiang Li's](https://github.com/rbind/daijiang/) personal website helped me a lot. 
+
 ## Installation
 
 Navigate to the root of hugo project and run:

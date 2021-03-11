@@ -1,7 +1,7 @@
 body {
-	font-family: Optima, -apple-system, Georgia, Arial,
+	font-family: Georgia, -apple-system, 'Helvetica Neue', Arial,
 	'Songti SC', 'SimSun', 'Hiragino Sans GB','宋体', 'Microsoft YaHei',
-	'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi_GB2312', '楷体', sans-serif;
+	'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体', sans-serif;
 	font-weight: 400;
 }
 code {

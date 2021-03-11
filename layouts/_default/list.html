@@ -31,9 +31,7 @@
 <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;
 margin-bottom: 10px">
 {{ if .IsHome}}
-{{ with .Site.Params.SiteUpdateText }}
- {{ . | markdownify }}
-{{ end }}
+{{ (index .Site.Params.lang.Sitelastupdate $.Site.Params.defaultLang) }}
 {{ .Site.LastChange.Format "2006-01-02" }}
 {{ end }}
 </div>

@@ -2,8 +2,9 @@ baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "Hugo-HT"
 theme = "hugo-ht"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
+enableRobotsTXT = true
+# enableGitInfo = true
 
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
@@ -41,34 +42,62 @@ en = "/en/:year/:month/:day/:slug/"
 [params]
     description = "Peronal website of Your Name"
     homeText = "You just need a Hugo blog from scratch"
+    # Be sure the make sure that the blogDirNmae matches the name used in the menu:
+    blogDirName = "posts"
+    singleLang = false
+    defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
     favicon = "media/hugo-logo.png"
+    # Edit by yourself:
     GithubEdit = "https://github.com/USERNAME/REPONAME/edit/master/content/"
     copyright = "&copy;"
-    copyrightYear = "2021"
-    SiteUpdateText = "site last updated on"
+    copyrightYear = "2020-2021"
+    # Edit by yourself:
     GithubRepo = "https://github.com/USERNAME/REPONAME"
+    # Edit by yourself:
+    ContentSource = "https://raw.githubusercontent.com/USERNAME/REPONAME/master/content/" 
 
 [params.logo]
+  # Change the logo picture as your prefer:
   url = "hugo-logo.png"
   width = 50.0
   height = 50.0
   alt = "Hugo-ht"
 
-[params.author]
-  en = "Your Name"
-  cn = "你的名字"
-
 [params.lang]
 
-  [params.lang.edit]
-    en = "Suggest an edit of this page"
-    cn = "编辑本页"
+    [params.lang.author]
+      en = "Your Name"
+      cn = "你的名字"
 
-  [params.lang.lastupdate]
-    en = "Last modified on"
-    cn = "最后一次修改于"
+    [params.lang.poweredBy]
+      en = "Made with"
+      cn = "本站驱动"
+
+    [params.lang.edit]
+      en = "Suggest an edit of this page"
+      cn = "编辑本页"
+
+    [params.lang.lastupdate]
+      en = "Last modified on"
+      cn = "最后一次修改于"
+
+    [params.lang.Sitelastupdate]
+      en = "Site last updated on"
+      cn = "最近一次更新于"
+
+    [params.lang.sourceCode]
+      en = "Content in"
+      cn = "内容存于"
+
+    [params.lang.subscribe]
+      en = "Subscribe"
+      cn = "订阅"
+
+    [params.lang.license]
+      en = "License"
+      cn = "版权"
 
 [markup]
  defaultMarkdownHandler = "goldmark"
@@ -111,4 +140,3 @@ en = "/en/:year/:month/:day/:slug/"
 
 [imaging]
 quality = 100
-      

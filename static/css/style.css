@@ -16,7 +16,9 @@ body {
 /* Two columns */
 div.splitbox {
   width:100%; 
-  margin-top: 0rem;
+  border-top: .15rem solid #757575;
+  padding: 1rem; 
+  margin-top: -1rem;
   margin-bottom: 1em;
 }
 
@@ -244,7 +246,7 @@ blockquote {
   margin: 1em 0;
   padding: 0 2em;
   border-left: 3px solid #ddd;
-  font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi_GB2312';
+  font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
 }
 
 /*Styling Custome blocks. based on Yihui Xie's Bookdown book's CSS: 
@@ -405,7 +407,7 @@ p {
 
 strong,
 b {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 em, 
@@ -437,6 +439,7 @@ hr {
   text-decoration: none;
   color: red;
   font-family: monospace;
+  font-size: 14px;
 }
 .body-text.list-text a[href^="#fn:"]:before{ content: '[' }
 .body-text.list-text a[href^="#fn:"]:after{ content: ']' }
