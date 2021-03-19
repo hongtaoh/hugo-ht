@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-author: "{{ index $.Site.Params.author $.Section}}"
+author: "{{ index $.Site.Params.lang.author $.Section}}"
 slug:
 draft: false
 toc: false
