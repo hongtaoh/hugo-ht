@@ -65,7 +65,7 @@ div.splitbox div.right {
 
 .footer-links {
   list-style: none;
-  margin: 0;
+  margin-top: -14px;
   padding: 0;
   color: #ccc;
   font-size: 14px;
@@ -235,9 +235,6 @@ code {
 
 /* misc elements */
 img, iframe, video { max-width: 100%; }
-main { 
-  hyphens: auto;
-}
 
 blockquote {
   background: #f9f9f9;
@@ -324,13 +321,12 @@ figcaption a {
 
 h1,
 h2,
-h3 
+h3,
 h4,
 h5,
 h6 {
   /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
-  padding: 0;
-  margin: 40px 0 30px;
+  margin-bottom: 25px;
   line-height: 1.25;
   text-align: center;
 }
@@ -338,11 +334,13 @@ h6 {
 h1 {
   font-size: 32px;
   font-weight: normal;
+  text-align: center;
 }
 
 h2 {
   font-size: 28px;
   font-weight: normal;
+  text-align: center;
 }
 
 h3 {
