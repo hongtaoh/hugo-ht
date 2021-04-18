@@ -7,17 +7,16 @@
       </a>
 
       <ul class="nav-links" >
-       {{ with .Site.Menus.main }}
-       {{ range .Site.Menus.main }}
-       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-       {{ end }}
-       {{ end }}
        {{ if eq .Section "cn"}}
        {{ range .Site.Menus.cn }}
        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
        {{ end }}
-       {{ else }}
+       {{ else if eq .Section "en"}}
        {{ range .Site.Menus.en }}
+       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+       {{ end }}
+       {{ else }}
+       {{ range .Site.Menus.main }}
        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
        {{ end }}
        {{ end }}
