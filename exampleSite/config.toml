@@ -85,7 +85,7 @@ en = "/en/:year/:month/:day/:slug/"
 
     [params.lang.Sitelastupdate]
       en = "Site last updated on"
-      cn = "最近一次更新于"
+      cn = "最后一次更新于"
 
     [params.lang.sourceCode]
       en = "Content in"

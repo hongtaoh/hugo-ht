@@ -3,7 +3,9 @@
      <ul class="footer-links">
       {{ if .IsHome }}
        <li>
-        <a href="https://gohugo.io/" class="footer-links-kudos" target="_blank">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>
+        <a href="https://gohugo.io/" class="footer-links-kudos" target="_blank">
+          {{ default (index $.Site.Params.Lang.madeWith $.Site.Params.defaultLang) (index $.Site.Params.lang.sourceCode $.Section) }} 
+          <img src="/media/hugo-logo.png" width="22" height="22"></a>
        </li>
        {{ with .Site.Params.GithubRepo}}
        <li>
@@ -46,6 +48,3 @@
             {{ end }}
      </div>
 </footer>
-
-
-
