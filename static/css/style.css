@@ -287,6 +287,7 @@ table {
   margin-bottom: 2em;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
+  text-align: center;
 }
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
