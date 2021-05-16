@@ -22,6 +22,10 @@ I wouldn't call it a "theme" because it is heavily built on other people's work:
 
 Besides, [Daijiang Li's](https://github.com/rbind/daijiang/) personal website helped me a lot. 
 
+## Blog tutorial
+
+If you read Chinese, consult the [website-building tutorial](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/) I created. 
+
 ## Installation
 
 Navigate to the root of hugo project and run:
@@ -64,6 +68,55 @@ git commit -m "updating submodule to latest"
 cd ..
 ```
 The above codes came from [paularmstrong](https://github.com/tj/git-extras/pull/80#issuecomment-3992323).
+
+## Customize
+
+### Editing `config.toml`
+
+- Edit baseURL
+
+- Edit `USERNAME` AND `REPONAME` associated with github
+
+- `params.lang.author`: edit `Your Name`
+
+### Language mode
+
+If you want to use a single language in the menu. Make sure there are folders within the `content` folder. Let's say you have `about` and `posts`. 
+
+1. Edit thems/hugo-ht/layouts/partials/nav.html
+
+Change the codes between <ul class = "nav-links"> and </ul> to:
+
+```
+{{ $currentPage := . }}
+{{ $section := replaceRE "^/([^/]+)/.*" "$1" .Permalink }}
+{{ range (default .Site.Menus.main (index .Site.Menus $section)) }}
+<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+{{ end }}
+```
+
+The above codes came from [Daijiang Li's blog](https://github.com/rbind/daijiang/blob/master/layouts/partials/nav.html).
+
+2. Edit `config.toml`
+
+Delete all the codes with `[[menu.en]]` and `[[menu.cn]]`. Add codes like:
+
+```toml
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 3
+```
+
+Then uncomment `# singleLang = true`.
 
 ## License
 
