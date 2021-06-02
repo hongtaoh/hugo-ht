@@ -43,7 +43,7 @@ posts = "/posts/:year/:month/:day/:slug/"
 [params]
     description = "Peronal website of Your Name"
     homeText = "You just need a Hugo blog from scratch"
-    # Be sure the make sure that the blogDirNmae matches the name used in the menu:
+    # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "posts"
     # singleLang = true
     defaultLang = "en"

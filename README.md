@@ -118,6 +118,10 @@ Delete all the codes with `[[menu.en]]` and `[[menu.cn]]`. Add codes like:
 
 Then uncomment `# singleLang = true`.
 
+## Notice
+
+In `config.toml`, please make sure `blogDirNmae` matches the name used in `menu`:
+
 ## License
 
 Codes are available under the MIT License. 
