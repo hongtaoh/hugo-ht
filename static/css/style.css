@@ -41,19 +41,27 @@ div.splitbox div.right {
                float:left;}
 }
 
-#top {
-  position: fixed;
-  right: 0;
-  z-index: 1;
+.wide {
+/*From Yihui's blog post:  https://yihui.org/en/2021/06/css-full-width/*/
+ width: 90vw;
+ margin-left: calc(44% - 42vw);
+ display: flex;
+}
+
+.wide-single {
+ width: 90vw;
+ margin-left: calc(44% - 42vw);
+}
+
+.column {
+  flex: 50%;
+  padding: .05px;
 }
 
 .fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+/*From Yihui's blog post:  https://yihui.org/en/2021/06/css-full-width/*/
+ width: 100vw;
+ margin-left: calc(50% - 50vw);
 }
 
 /*Stylying footer text*/
@@ -249,6 +257,7 @@ blockquote {
 .note,
 .important,
 .tip,
+.info,
 .caution,
 .warning {
   min-height: 2.2em;
@@ -264,6 +273,9 @@ blockquote {
   background-image: url("/media/blocks/important.png");
 }
 .tip {
+  background-image: url("/media/blocks/tip.png");
+}
+.info {
   background-image: url("/media/blocks/tip.png");
 }
 .caution {
@@ -463,7 +475,6 @@ hr {
   pre, code {
     font-size: 12px;
   }
-
 }
 
 
