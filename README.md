@@ -6,6 +6,11 @@ A simple hugo theme suitable for bilingual personal blogs. It is  a copy of [my 
 
 ![example site appearance](https://raw.githubusercontent.com/hongtaoh/hugo-ht/master/static/media/exampleSite.png)
 
+## People 
+
+- Kristen Zhang
+- ??
+
 ## Shoulders of the giants
 
 I wouldn't call it a "theme" because it is heavily built on other people's work:
