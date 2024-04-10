@@ -37,6 +37,7 @@ Table of Contents:
 
 <div class="body-text list-text">
 {{ .Content | partial "add-header-anchors" }}
+{{ with .Params.tags }}<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}/">#{{ . }}</a>{{ end }}
 <p style="color:#777;">{{ default (index $.Site.Params.lang.lastupdate $.Site.Params.defaultLang) (index $.Site.Params.lang.lastupdate $.Section)}} {{ .Page.Lastmod.Format "2006-01-02" }}</p>
 </div>
 <a href="#top"><i class="fa fa-chevron-up" style="font-size: 30px; color: black;"></i></a>
