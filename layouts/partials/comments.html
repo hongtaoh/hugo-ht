@@ -1,0 +1,21 @@
+<div class="content">
+{{ if and (not .IsSection) (not .IsHome) (not (eq .Kind "term"))}}
+<script src="https://giscus.app/client.js"
+        data-repo="hongtaoh/mywebsite"
+        data-repo-id="R_kgDOLwIVBA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLwIVBM4CeyR1"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</br>
+{{ end }} 
+</div>
