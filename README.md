@@ -93,7 +93,7 @@ If you want to use a single language in the menu. Make sure there are folders wi
 
 1. Edit thems/hugo-ht/layouts/partials/nav.html
 
-Change the codes between <ul class = "nav-links"> and </ul> to:
+Change the codes between `<ul class = "nav-links">` and `</ul>` to:
 
 ```
 {{ $currentPage := . }}
