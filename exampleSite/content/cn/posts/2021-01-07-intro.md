@@ -1,0 +1,136 @@
+---
+title: "Markdown 试水"
+date: 2021-01-07T13:42:27-05:00
+author: 你的名字
+slug: first-post-cn
+draft: false
+toc: true
+categories:
+  - test
+tags:
+  - article
+---
+{{<block class="reminder">}}
+如果好奇以下的内容是如何实现的，请参考[本页源代码](https://raw.githubusercontent.com/hongtaoh/hugo-ht-exampleSite/master/content/cn/posts/2021-01-07-intro.md)。
+{{<end>}}
+
+# 第一级标题
+## 第二级标题
+### 第三级标题
+#### 第四级标题
+##### 第五级标题
+###### 第六级标题
+
+## 列表
+
+- Water
+- Water
+- Water
+  1. Water
+  2. Water
+  3. Water
+- Water
+  - Water
+  - Water
+  - Water
+    1. Water
+    2. Water
+
+## 表格
+
+| Water | *Water* | Water |
+|---------|---------|---------|
+| Water | Water | Water |
+| **Water** | Water[^1] | Water |
+| Water | Water | Water |
+
+## 引语
+
+> 知之为知之，不知为不知，是知也[^2]。 — 孔子
+
+## 数学公式
+
+最简单的如，`$1 + 1 = 3$`
+
+你可以加入索引:
+
+`$$p(x) = \frac{1}{\sigma \sqrt{2 \pi}} exp \left(-\frac{1}{2}\left[\frac{x-\mu}{\sigma}\right]^2\right)\tag{1.1}\label{eq1.1}$$`
+
+多行[^3], 
+
+`\begin{align}
+\sqrt{37} & = \sqrt{\frac{73^2-1}{12^2}} \\
+ & = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\ 
+ & = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\
+ & = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\ 
+ & \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)
+\end{align}`
+
+## 代码
+
+句内代码，如 `this`. 
+
+代码块：
+
+```javascript
+// JavaScript 代码：
+water = [1, 2, 3, 4, 5]
+let a = 0;
+for (let i = 0; i < 5; i++){
+	if (water[i] > 3) {
+		a += 1
+	}
+}
+// 请问 a 的值现在是多少呢？
+```
+
+## 图片
+
+{{<figure src="https://www.rd.com/wp-content/uploads/2016/09/fall-photos-Iowa_Stewart.jpg" title="标题" caption="说明文字">}}
+
+### 全宽图片
+{{<figure src="https://hongtaoh.com/media/cnblog/sgs/sgs-hostel.jpg" caption="在瑞士因特拉肯一家青年旅舍阳台上，2017年5月，郝鸿涛摄" class="fullwidth">}}
+
+## 视频
+
+{{< bilibili 883818925 >}}
+
+## 自定义模块
+{{<block class="note" >}}
+一则通知。
+{{< end >}}
+
+{{<block class="important" >}}
+这很重要！
+{{< end >}}
+
+{{<block class="tip" >}}
+一条小建议。
+{{< end >}}
+
+{{<block class="caution" >}}
+请注意！
+{{< end >}}
+
+{{<block class="warning" >}}
+警告！
+{{< end >}}
+
+{{<block class="reminder" >}}
+我一般用这个提醒自己一件事。
+{{< end >}}
+
+## 分栏
+{{< columns >}}
+
+{{<figure-a src="https://animalcorner.org/wp-content/uploads/2020/07/Japanese-Dog-Breeds-Akita.jpg" link="/" >}}
+
+{{< column >}}
+
+你的描述
+
+{{< endcolumn >}}
+
+[^1]: Water
+[^2]: 你知道最后一个「知」怎么念吗？
+[^3]: 这个公式来自 [这里](https://math.meta.stackexchange.com/a/5024)，原作者为 [MJD](https://math.meta.stackexchange.com/users/25554/mjd)

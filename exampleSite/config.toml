@@ -1,0 +1,52 @@
+baseURL = "https://yoursite.com"
+title = "Your Site"
+theme = "hugo-ht"
+
+# Language settings
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    title = "Your Site"
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      author = "Your Name"
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Posts"
+      url = "/posts/"
+      weight = 3
+
+  [languages.cn]
+    title = "您的网站"
+    weight = 2
+    languageName = "中文"
+    [languages.cn.params]
+      author = "您的姓名"
+    [[languages.cn.menu.main]]
+      name = "首页"
+      url = "/cn/"
+      weight = 1
+    [[languages.cn.menu.main]]
+      name = "关于"
+      url = "/cn/about/"
+      weight = 2
+    [[languages.cn.menu.main]]
+      name = "文章"
+      url = "/cn/posts/"
+      weight = 3
+
+[params]
+  logo.url = "your-logo.png"
+  logo.width = 40
+  logo.height = 40
+  logo.alt = "Logo"
