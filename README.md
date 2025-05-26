@@ -6,15 +6,9 @@ A simple hugo theme suitable for bilingual personal blogs. It is  a copy of [my 
 
 ![example site appearance](https://raw.githubusercontent.com/hongtaoh/hugo-ht/master/static/media/exampleSite.png)
 
-## People 
-
-- [Kristen Zhang](https://kristenjz.com/)
-- [Ashley](https://ashleygua.github.io/)
-- [Zhijie](https://www.finderaha.com)
-
 ## Shoulders of the giants
 
-Hugo-ht is heavily built on others' amazing work:
+I wouldn't call it a "theme" because it is heavily built on other people's work:
 
 - The base of Hugo-ht is [Yihui Xie](https://github.com/yihui)'s [hugo-xmin](https://github.com/yihui/hugo-xmin)
 
@@ -30,11 +24,11 @@ Besides, [Daijiang Li's](https://github.com/rbind/daijiang/) personal website he
 
 ## Blog tutorial
 
-If you read Chinese, consult the [website-building tutorial](https://hongtaoh.com/cn/2024/03/22/personal-website-tutorial/) I created. 
+If you read Chinese, consult the [website-building tutorial](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/) I created. 
 
 ## Installation
 
-Navigate to the root of your hugo project and run:
+Navigate to the root of hugo project and run:
 
 ```bash
 cd themes
@@ -51,8 +45,6 @@ Or you can add hugo-ht as a submodule:
 
 ```bash
 git submodule add https://github.com/hongtaoh/hugo-ht themes/hugo-ht
-cp -r themes/hugo-ht/exampleSite/* .
-cp -r themes/hugo-ht/archetypes . 
 ```
 
 The difference between the two methods is that if you add it as a submodule, the `hugo-ht` theme you use is connected to this repository. The benefit is that you can keep it updated, but there is a caveat: if you make lots of changes to the styles based on your personal preferences, these changes might be lost.
@@ -69,7 +61,7 @@ To update the submodule, run the following codes at the root directory of your h
 
 ```bash
 cd themes/hugo-ht
-git checkout main && git pull
+git checkout master && git pull
 cd ..
 git add hugo-ht
 git commit -m "updating submodule to latest"

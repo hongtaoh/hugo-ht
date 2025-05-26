@@ -1,15 +1,15 @@
 {{ partial "header.html" . }}
 
+<main class = "content">
+
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
 {{ end }}
 
-<main class = "content">
-
 <div class="list-page">
-{{ .Content }}
 
+{{ .Content }}
 
 {{if not .IsHome}}
 <ul>

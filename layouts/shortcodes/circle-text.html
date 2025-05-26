@@ -1,0 +1,21 @@
+{{ $text := .Get 0 }}
+<style>
+  .circle-ruby rt {
+    font-size: 0.8em;
+    color: red;
+    transform: translateY(1.5em);
+  }
+  .circle-ruby {
+    ruby-position: under;
+    line-height: 2.5;
+  }
+</style>
+<ruby class="circle-ruby">
+{{- range split $text "" -}}
+  {{- if ne . " " -}}
+    {{.}}<rt>○</rt>
+  {{- else -}}
+    &nbsp;
+  {{- end -}}
+{{- end -}}
+</ruby>

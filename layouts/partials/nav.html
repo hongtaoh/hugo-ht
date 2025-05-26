@@ -1,20 +1,31 @@
-<nav class="nav" >
-      <a href="{{ "/" | relURL }}" class="nav-logo">
-        <img src="{{ print "" .Site.Params.logo.url | relURL }}"
-         width="{{ .Site.Params.logo.width }}"
-         height="{{ .Site.Params.logo.height }}"
-         alt="{{ .Site.Params.logo.alt }}">
-      </a>
-
-      <ul class="nav-links" >
-        {{ if .IsHome }}
-        {{ range .Site.Menus.en }}
-           <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-        {{ end }}
-        {{ else }}
-        {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
-           <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-       {{ end }}
-       {{ end }}
-      </ul>
-</nav>
+<nav class="nav">
+  <a href="{{ "/" | relURL }}" class="nav-logo">
+ <img src="{{ print "media/" .Site.Params.logo.url | relURL }}"
+ width="{{ .Site.Params.logo.width }}"
+ height="{{ .Site.Params.logo.height }}"
+ alt="{{ .Site.Params.logo.alt }}">
+ </a>
+ <ul class="nav-links">
+  {{ if eq .Kind "404" }}
+ <!-- Use the main menu for 404 pages -->
+  {{ range .Site.Menus.en }}
+ <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+  {{ end }}
+  {{ else if .IsHome }}
+ <!-- Use the 'en' menu for the homepage -->
+  {{ range .Site.Menus.en }}
+ <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+  {{ end }}
+  {{ else if or (eq .Kind "taxonomy") (eq .Kind "term") }}
+ <!-- Use the 'en' menu for taxonomy and term pages -->
+  {{ range .Site.Menus.en }}
+ <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+  {{ end }}
+  {{ else }}
+ <!-- Default menu logic for other pages -->
+  {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
+ <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+  {{ end }}
+  {{ end }}
+ </ul>
+ </nav>
