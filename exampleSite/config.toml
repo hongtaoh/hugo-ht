@@ -5,6 +5,10 @@ defaultContentLanguage = "en"
 enableRobotsTXT = true
 footnotereturnlinkcontents = "↩"
 
+[module]
+  [module.hugoVersion]
+    min = "0.119.0"
+
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]

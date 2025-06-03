@@ -1,0 +1,17 @@
+name = "Hugo HT"
+license = "MIT"https://github.com/hongtaoh/hugo-ht/blob/master/LICENSE.md"
+description = "A minimal multilingual blog theme"
+
+# The home page of the theme, where the source can be found.
+homepage = "https://github.com/hongtaoh/hugo-ht"
+
+# If you have a running demo of the theme.
+demosite = "https://hugo-ht-example.vercel.app"
+
+tags = ["blog", "minimal", "multilingual"]
+features = ["multilingual"]
+
+# If the theme has a single author
+[author]
+    name = "Hongtao Hao"
+    homepage = "https://hongtaoh.com"
