@@ -4,7 +4,7 @@ A simple hugo theme suitable for bilingual personal blogs. It is  a copy of [my 
 
 [Example site](https://hugo-ht.hongtaoh.com/)
 
-![example site appearance](https://raw.githubusercontent.com/hongtaoh/hugo-ht/master/static/media/exampleSite.png)
+![example site appearance](/static/media/exampleSite.png)
 
 ## Shoulders of the giants
 
