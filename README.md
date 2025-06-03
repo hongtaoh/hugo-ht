@@ -35,6 +35,7 @@ cd themes
 git clone https://github.com/hongtaoh/hugo-ht
 mkdir hugo-ht-new
 cp -r hugo-ht/* hugo-ht-new
+cp -r config.toml hugo-ht-new
 rm -rf hugo-ht
 mv hugo-ht-new hugo-ht
 cd .. 
