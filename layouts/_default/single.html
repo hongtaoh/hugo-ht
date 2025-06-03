@@ -17,10 +17,8 @@ Table of Contents:
 
 <div class="body-text list-text">
 {{ .Content | partial "add-header-anchors" }}
-{{ with .Params.tags }}
-  {{ range . }}
-    <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
-  {{ end }}
+{{ range slice .Params.tags }}
+  <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
 {{ end }}
 <p style="color:#777;">
   {{ i18n "lastupdate" }} {{ .Lastmod.Format "2006-01-02" }}
