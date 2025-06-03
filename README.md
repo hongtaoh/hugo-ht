@@ -1,6 +1,6 @@
 # HUGO HT
 
-A simple hugo theme suitable for bilingual personal blogs. It is  a copy of [my personal website](https://hongtaoh.com/).
+A simple hugo theme suitable for multilingual personal blogs. 
 
 [Example site](https://hugo-ht.hongtaoh.com/)
 
@@ -8,7 +8,7 @@ A simple hugo theme suitable for bilingual personal blogs. It is  a copy of [my 
 
 ## Shoulders of the giants
 
-I wouldn't call it a "theme" because it is heavily built on other people's work:
+This theme is heavily built on other people's work:
 
 - The base of Hugo-ht is [Yihui Xie](https://github.com/yihui)'s [hugo-xmin](https://github.com/yihui/hugo-xmin)
 
@@ -75,52 +75,9 @@ The above codes came from [paularmstrong](https://github.com/tj/git-extras/pull/
 
 - Edit baseURL
 
-- Edit `USERNAME` AND `REPONAME` associated with github
+- Edit `USERNAME` AND `REPONAME` associated with github (params -> GithubRepo)
 
 - `params.lang.author`: edit `Your Name`
-
-### Language mode
-
-If you want to use a single language in the menu. Make sure there are folders within the `content` folder. Let's say you have `about` and `posts`. 
-
-1. Edit thems/hugo-ht/layouts/partials/nav.html
-
-Change the codes between `<ul class = "nav-links">` and `</ul>` to:
-
-```
-{{ $currentPage := . }}
-{{ $section := replaceRE "^/([^/]+)/.*" "$1" .Permalink }}
-{{ range (default .Site.Menus.main (index .Site.Menus $section)) }}
-<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-{{ end }}
-```
-
-The above codes came from [Daijiang Li's blog](https://github.com/rbind/daijiang/blob/master/layouts/partials/nav.html).
-
-2. Edit `config.toml`
-
-Delete all the codes with `[[menu.en]]` and `[[menu.cn]]`. Add codes like:
-
-```toml
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 3
-```
-
-Then uncomment `# singleLang = true`.
-
-## Notice
-
-In `config.toml`, please make sure `blogDirNmae` matches the name used in `menu`:
 
 ## License
 
