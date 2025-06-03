@@ -1,5 +1,6 @@
 name = "Hugo HT"
-license = "MIT"https://github.com/hongtaoh/hugo-ht/blob/master/LICENSE.md"
+license = "MIT"
+licenselink = "https://github.com/hongtaoh/hugo-ht/blob/master/LICENSE.md"
 description = "A minimal multilingual blog theme"
 
 # The home page of the theme, where the source can be found.

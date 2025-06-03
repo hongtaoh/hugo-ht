@@ -19,7 +19,7 @@ Table of Contents:
 {{ .Content | partial "add-header-anchors" }}
 {{ with .Params.tags }}
   {{ range . }}
-    <a href="{{ "tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
+    <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
   {{ end }}
 {{ end }}
 <p style="color:#777;">
