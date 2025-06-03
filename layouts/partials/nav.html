@@ -1,31 +1,45 @@
 <nav class="nav">
-  <a href="{{ "/" | relURL }}" class="nav-logo">
- <img src="{{ print "media/" .Site.Params.logo.url | relURL }}"
- width="{{ .Site.Params.logo.width }}"
- height="{{ .Site.Params.logo.height }}"
- alt="{{ .Site.Params.logo.alt }}">
- </a>
- <ul class="nav-links">
-  {{ if eq .Kind "404" }}
- <!-- Use the main menu for 404 pages -->
-  {{ range .Site.Menus.en }}
- <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-  {{ end }}
-  {{ else if .IsHome }}
- <!-- Use the 'en' menu for the homepage -->
-  {{ range .Site.Menus.en }}
- <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-  {{ end }}
-  {{ else if or (eq .Kind "taxonomy") (eq .Kind "term") }}
- <!-- Use the 'en' menu for taxonomy and term pages -->
-  {{ range .Site.Menus.en }}
- <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-  {{ end }}
-  {{ else }}
- <!-- Default menu logic for other pages -->
-  {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
- <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-  {{ end }}
-  {{ end }}
- </ul>
- </nav>
+  <a href="{{ "/" | relLangURL }}" class="nav-logo">
+    <img src="{{ print "media/" .Site.Params.logo.url | relURL }}"
+         width="{{ .Site.Params.logo.width }}"
+         height="{{ .Site.Params.logo.height }}"
+         alt="{{ .Site.Params.logo.alt }}">
+  </a>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+
+    <div class="language-switcher">
+      <button id="language-button">
+        <i class="fa fa-language" style="font-size:20px;"></i> {{ .Site.Language.LanguageName }} <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="language-menu" class="language-menu">
+        {{ range .Site.Languages }}
+          {{ if ne .Lang $.Site.Language.Lang }}
+            <a href="{{ .Lang | relURL }}">{{ .LanguageName }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const button = document.getElementById("language-button");
+    const menu = document.getElementById("language-menu");
+
+    button.addEventListener("click", function(e) {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function() {
+      menu.classList.remove("show");
+    });
+  });
+</script>

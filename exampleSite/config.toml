@@ -1,52 +1,119 @@
-baseURL = "https://yoursite.com"
-title = "Your Site"
+baseURL = "https://example.com/"
 theme = "hugo-ht"
-
-# Language settings
+languageCode = "en-us"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+footnotereturnlinkcontents = "↩"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = false
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "pygments"
+    tabWidth = 4
+
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = true
+    startLevel = 2
+
+[imaging]
+  quality = 100
+
+[params]
+  MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  MathJaxVersion = "2.7.5"
+  favicon = "media/hugo-logo.png"
+  GithubRepo = "https://github.com/USERNAME/REPONAME"
+  copyright = "&copy;"
+  copyrightYearStart = "2020"
+  blogDirName = "posts"
+  logo = { url = "hugo-logo.png", width = 50.0, height = 50.0, alt = "Hugo-ht" }
 
 [languages]
+
   [languages.en]
-    title = "Your Site"
-    weight = 1
     languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    title = "Hugo-HT"
+    contentDir = "content/en"
+
     [languages.en.params]
-      author = "Your Name"
+      description = "Personal website of Your Name"
+      licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+
+    [languages.en.permalinks]
+      posts = "/en/posts/:year/:month/:day/:slug/"
+
     [[languages.en.menu.main]]
       name = "Home"
       url = "/"
       weight = 1
+
     [[languages.en.menu.main]]
       name = "About"
       url = "/about/"
       weight = 2
+
     [[languages.en.menu.main]]
       name = "Posts"
       url = "/posts/"
       weight = 3
 
   [languages.cn]
-    title = "您的网站"
-    weight = 2
     languageName = "中文"
+    languageCode = "zh-cn"
+    weight = 2
+    title = "Hugo-HT"
+    contentDir = "content/cn"
+
     [languages.cn.params]
-      author = "您的姓名"
+      description = "你的个人网站"
+      licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
+
+    [languages.cn.permalinks]
+      posts = "/cn/posts/:year/:month/:day/:slug/"
+
     [[languages.cn.menu.main]]
       name = "首页"
-      url = "/cn/"
+      url = "/"
       weight = 1
+
     [[languages.cn.menu.main]]
       name = "关于"
-      url = "/cn/about/"
+      url = "/about/"
       weight = 2
-    [[languages.cn.menu.main]]
-      name = "文章"
-      url = "/cn/posts/"
-      weight = 3
 
-[params]
-  logo.url = "your-logo.png"
-  logo.width = 40
-  logo.height = 40
-  logo.alt = "Logo"
+    [[languages.cn.menu.main]]
+      name = "博客"
+      url = "/posts/"
+      weight = 3

@@ -1,44 +1,45 @@
 {{ partial "header.html" . }}
 
-<main class = "content">
+<main class="content">
 
-{{ $name := .Data.Plural -}}
-{{ if eq $name "tags" -}}
-<h1>#{{ .Title | markdownify }}</h1>
-{{ end }}
-
-<div class="list-page">
-
-{{ .Content }}
-
-{{if not .IsHome}}
-<ul>
-  {{ range .Pages.GroupByDate "2006" }}
-  <h2 style="text-align: left;">{{ .Key }}</h2>
-  {{ range .Pages.GroupByDate "2006-01-02" }}
-  {{ range .Pages }}
-  <p>
-    <span class="date">
-    {{ .Date.Format "2006-01-02" }}
-    </span>
-    <a href="{{ .RelPermalink }}">
-    {{ .Title }}
-    </a>
-  </p>
+  {{ $name := .Data.Plural -}}
+  {{ if eq $name "tags" -}}
+    <h1>#{{ .Title | markdownify }}</h1>
+  {{ else }}
+    <h1>{{ .Title }}</h1>
   {{ end }}
-  {{ end }}
-  {{ end }}
-</ul>
-{{ end }}
-</div>
+
+  <div class="list-page">
+
+    {{ .Content }}
+
+    {{ if not .IsHome }}
+      <ul>
+        {{ range .Pages.GroupByDate "2006" }}
+          <h2 style="text-align: left;">{{ .Key }}</h2>
+          {{ range .Pages.GroupByDate "2006-01-02" }}
+            {{ range .Pages }}
+              <p>
+                <span class="date">
+                  {{ .Date.Format "2006-01-02" }}
+                </span>
+                <a href="{{ .RelPermalink }}">
+                  {{ .Title }}
+                </a>
+              </p>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ end }}
+
+  </div>
 </main>
 
-{{ partial "footer.html" . }} 
+{{ partial "footer.html" . }}
 
-<div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;
-margin-bottom: 10px">
-{{ if .IsHome}}
-{{ (index .Site.Params.lang.Sitelastupdate $.Site.Params.defaultLang) }}
-{{ .Site.LastChange.Format "2006-01-02" }}
+{{ if .IsHome }}
+  <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px; margin-bottom: 10px">
+    {{ i18n "Sitelastupdate" }} {{ .Site.LastChange.Format "2006-01-02" }}
+  </div>
 {{ end }}
-</div>

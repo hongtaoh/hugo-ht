@@ -5,18 +5,7 @@ body {
 	font-weight: 400;
 }
 
-/*-apple-system, Avenir Next, */
-
 code {
   font-family: 'Menlo', 'Monaco', 'Courier New',  'Courier', monospace;
   font-size: 14px;
 }
-
-/*@font-face {
-  font-family: 'Noto Serif SC';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Noto_Serif_SC/NotoSerifSC-Medium.otf')
-}
-
-'Noto Serif SC',*/
