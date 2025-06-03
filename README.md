@@ -2,7 +2,7 @@
 
 A simple hugo theme suitable for multilingual personal blogs. 
 
-[Example site](https://hugo-ht.hongtaoh.com/)
+[Example site](https://hugo-ht-example.vercel.app)
 
 ![example site appearance](/static/media/exampleSite.png)
 
