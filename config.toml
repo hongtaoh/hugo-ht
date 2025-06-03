@@ -73,9 +73,13 @@ footnotereturnlinkcontents = "↩"
     [languages.en.params]
       description = "Personal website of Your Name"
       licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    
+    [languages.en.taxonomies]
+      tag = "tags"
+      category = "categories"
 
     [languages.en.permalinks]
-      posts = "/en/posts/:year/:month/:day/:slug/"
+      posts = "/posts/:year/:month/:day/:slug/"
 
     [[languages.en.menu.main]]
       name = "Home"
@@ -103,8 +107,12 @@ footnotereturnlinkcontents = "↩"
       description = "你的个人网站"
       licenseURL = "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
 
+    [languages.cn.taxonomies]
+      tag = "tags"
+      category = "categories"
+
     [languages.cn.permalinks]
-      posts = "/cn/posts/:year/:month/:day/:slug/"
+      posts = "/posts/:year/:month/:day/:slug/"
 
     [[languages.cn.menu.main]]
       name = "首页"
