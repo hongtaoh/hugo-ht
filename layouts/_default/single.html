@@ -22,6 +22,9 @@ Table of Contents:
 {{ end }}
 <p style="color:#777;">
   {{ i18n "lastupdate" }} {{ .Lastmod.Format "2006-01-02" }}
+  {{ if .Site.Params.GithubRepo }}
+    • <a href="{{ .Site.Params.GithubRepo }}/blob/main/content/{{ .Lang }}/{{ .File.Path }}" target="_blank">{{ i18n "edit" }}</a>
+  {{ end }}
 </p>
 
 </div>
