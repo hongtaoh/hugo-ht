@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://example.com"
 theme = "hugo-ht"
 languageCode = "en-us"
 defaultContentLanguage = "en"
