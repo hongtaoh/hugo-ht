@@ -13,6 +13,7 @@
       {{ end }}
     </ul>
 
+    {{ if gt (len .Site.Languages) 1 }}
     <div class="language-switcher">
       <button id="language-button">
         <i class="fa fa-language" style="font-size:20px;"></i> {{ .Site.Language.LanguageName }} <i class="fa fa-caret-down"></i>
@@ -25,6 +26,7 @@
         {{ end }}
       </div>
     </div>
+    {{ end }}
   </div>
 </nav>
 

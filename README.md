@@ -33,12 +33,12 @@ Navigate to the root of hugo project and run:
 ```bash
 cd themes
 git clone https://github.com/hongtaoh/hugo-ht
-mkdir hugo-ht-new
-cp -r hugo-ht/* hugo-ht-new
-cp -r config.toml hugo-ht-new
-rm -rf hugo-ht
-mv hugo-ht-new hugo-ht
-cd .. 
+cd hugo-ht
+rm -rf .git
+cd ../..
+cp -r themes/hugo-ht/exampleSite/* .
+cp -r themes/hugo-ht/archetypes . 
+cp themes/hugo-ht/config.toml .
 ```
 ### Submodule 
 
@@ -78,7 +78,7 @@ The above codes came from [paularmstrong](https://github.com/tj/git-extras/pull/
 
 - Edit `USERNAME` AND `REPONAME` associated with github (params -> GithubRepo)
 
-- `params.lang.author`: edit `Your Name`
+- Edit files in the folder of `i18n`. 
 
 ## License
 
