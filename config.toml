@@ -2,6 +2,7 @@ baseURL = "https://example.com/"
 theme = "hugo-ht"
 languageCode = "en-us"
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
 footnotereturnlinkcontents = "↩"
 
@@ -79,7 +80,7 @@ footnotereturnlinkcontents = "↩"
       category = "categories"
 
     [languages.en.permalinks]
-      posts = "/posts/:year/:month/:day/:slug/"
+      posts = ":year/:month/:day/:slug/"
 
     [[languages.en.menu.main]]
       name = "Home"
@@ -112,7 +113,7 @@ footnotereturnlinkcontents = "↩"
       category = "categories"
 
     [languages.cn.permalinks]
-      posts = "/posts/:year/:month/:day/:slug/"
+      posts = ":year/:month/:day/:slug/"
 
     [[languages.cn.menu.main]]
       name = "首页"
