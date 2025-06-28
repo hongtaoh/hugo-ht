@@ -1,4 +1,3 @@
-baseURL = "https://hugo-ht-example.vercel.app"
 theme = "hugo-ht"
 languageCode = "en-us"
 defaultContentLanguage = "en"
