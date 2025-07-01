@@ -17,8 +17,14 @@ Table of Contents:
 
 <div class="body-text list-text">
 {{ .Content | partial "add-header-anchors" }}
-{{ range slice .Params.tags }}
-  <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
+{{ $tags := .Params.tags }}
+{{ if $tags }}
+  {{ if not (reflect.IsSlice $tags) }}
+    {{ $tags = slice $tags }}
+  {{ end }}
+  {{ range $tags }}
+    <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
+  {{ end }}
 {{ end }}
 <p style="color:#777;">
   {{ i18n "lastupdate" }} {{ .Lastmod.Format "2006-01-02" }}

@@ -40,6 +40,6 @@
 
 {{ if .IsHome }}
   <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px; margin-bottom: 10px">
-    {{ i18n "Sitelastupdate" }} {{ .Site.LastChange.Format "2006-01-02" }}
+    {{ i18n "Sitelastupdate" }} {{ .Site.Lastmod.Format "2006-01-02" }}
   </div>
 {{ end }}
