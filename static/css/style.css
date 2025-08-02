@@ -307,19 +307,42 @@ pre {
 
 /* Actual code inside the block */
 code, .indented-block {
-  font-family: 'Source Code Pro', monospace;  /* Use a monospaced font */
-  color: #333;  /* Dark text color */
-  font-size: 14px;  /* Adjust size */
-  line-height: 1.5;
-  word-wrap: break-word;  /* Handle long lines */
+  font-family: 'Source Code Pro', monospace;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5; /* 保持你觉得舒适的行高 */
+  word-wrap: break-word;
 }
 
 .indented-block {
-  margin-bottom: 2rem;
+  white-space: pre-wrap;
+  margin-bottom: 0rem;
+  border-left: 3px solid #3b82f6;
+
+  /* 专注于减少上下内边距 */
+  padding-top: 0.1em;    /* 显著减少顶部内边距，0.1em 会非常小 */
+  padding-bottom: 0.1em; /* 显著减少底部内边距 */
+  
+  /* 左右内边距可以根据需要调整 */
+  padding-left: 2rem;    /* 保持你想要的左侧缩进 */
+  padding-right: 0.5em;  /* 右侧可以维持或稍微减少 */
+}
+
+/* code, .indented-block {
+  font-family: 'Source Code Pro', monospace; 
+  color: #333; 
+  font-size: 14px; 
+  line-height: 1.5;
+  word-wrap: break-word; 
+}
+
+.indented-block {
+  white-space: pre-wrap;
+  margin-bottom: 0rem;
   padding: 0.5em;
   padding-left: 2rem;
-  border-left: 3px solid #3b82f6;  /* Blue accent */
-}
+  border-left: 3px solid #3b82f6;  
+} */
 
 blockquote {
   border-left: 4px solid #e1e4e8;
