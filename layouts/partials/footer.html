@@ -52,8 +52,8 @@
       {{ i18n "author" }}
     
       {{ $startYear := .Site.Params.copyrightYearStart }}
-      {{ $currentYear := .Lastmod.Format "2006" }}
-      
+      {{ $currentYear := now.Format "2006" }}
+
       {{ if eq $startYear $currentYear }}
         {{ $startYear }}
       {{ else }}
